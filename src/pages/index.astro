@@ -1,5 +1,6 @@
 ---
 import logoHeader from "../../assets/zest-logo-header.png";
+import cantoZen from "../../assets/canto-zen.png";
 ---
 
 <!doctype html>
@@ -652,6 +653,90 @@ import logoHeader from "../../assets/zest-logo-header.png";
         font-style: italic;
         color: var(--green-deep);
         line-height: 1.6;
+      }
+
+      /* ── Personalization section ── */
+      .personalization-section {
+        padding: 8rem 2rem;
+        max-width: 1400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        align-items: center;
+      }
+      @media (max-width: 1024px) {
+        .personalization-section {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+          padding: 6rem 1.5rem;
+        }
+      }
+      .personalization-copy {
+        max-width: 560px;
+      }
+      .personalization-text {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        line-height: 1.8;
+        margin: 1.5rem 0 2rem;
+      }
+      .personalization-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+      .personalization-chip {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.45rem 1rem;
+        border-radius: 999px;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        border: 1px solid rgba(122, 154, 110, 0.25);
+        background: rgba(122, 154, 110, 0.1);
+        color: var(--green-dark);
+      }
+      .personalization-media {
+        position: relative;
+      }
+      .personalization-image-card {
+        background: white;
+        border-radius: 2rem;
+        padding: 0.9rem;
+        border: 1px solid rgba(122, 154, 110, 0.15);
+        box-shadow: 0 30px 60px rgba(45, 74, 38, 0.12);
+      }
+      .personalization-image {
+        width: 100%;
+        display: block;
+        border-radius: 1.4rem;
+        object-fit: cover;
+        max-height: 540px;
+      }
+      .personalization-badge {
+        position: absolute;
+        bottom: -1rem;
+        left: 1.5rem;
+        background: rgba(246, 241, 231, 0.95);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(122, 154, 110, 0.18);
+        border-radius: 1rem;
+        padding: 0.75rem 1rem;
+        font-size: 0.65rem;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--green-deep);
+      }
+      @media (max-width: 768px) {
+        .personalization-badge {
+          position: static;
+          margin-top: 1rem;
+          display: inline-flex;
+        }
       }
 
       /* ── Comparison section ── */
@@ -1577,6 +1662,40 @@ import logoHeader from "../../assets/zest-logo-header.png";
               >Relatórios mensais</span
             >
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Personalization -->
+    <section style="background: white">
+      <div class="personalization-section">
+        <div class="personalization-copy reveal">
+          <p class="section-label">Diferencial de marca</p>
+          <h2 class="section-title">
+            Transformamos áreas livres em <em>espaços de descanso</em> com
+            identidade.
+          </h2>
+          <p class="personalization-text">
+            A Zest vai além da estação de conveniência: desenhamos pequenas
+            intervenções no ambiente do parceiro para criar pontos de pausa,
+            acolhimento e permanência. O resultado é um espaço mais convidativo,
+            com percepção premium e maior conexão do aluno com a sua marca.
+          </p>
+          <div class="personalization-chips">
+            <span class="personalization-chip">Ambiente mais acolhedor</span>
+            <span class="personalization-chip">Valorização da área ociosa</span>
+            <span class="personalization-chip">Experiência premium</span>
+          </div>
+        </div>
+        <div class="personalization-media reveal reveal-delay-2">
+          <div class="personalization-image-card">
+            <img
+              src={cantoZen.src}
+              alt="Exemplo de personalização da Zest com espaço de descanso na área livre do parceiro"
+              class="personalization-image"
+            />
+          </div>
+          <span class="personalization-badge">Intervenção leve e estratégica</span>
         </div>
       </div>
     </section>
